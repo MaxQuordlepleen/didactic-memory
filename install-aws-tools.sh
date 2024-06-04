@@ -35,7 +35,7 @@ sudo /bin/sh -c "$(curl -fsSL https://steampipe.io/install/steampipe.sh)" \
 sudo /bin/sh -c "$(curl -fsSL https://powerpipe.io/install/powerpipe.sh)" \
 && mkdir pp-dashboards && cd pp-dashboards \
 && powerpipe mod init \
-&& powerpipe mod install github.com/turbot/steampipe-mod-aws-compliance \
+&& powerpipe mod install github.com/turbot/steampipe-mod-aws-compliance
 
 pip install prowler
 

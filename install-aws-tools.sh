@@ -6,8 +6,8 @@ git clone https://github.com/nccgroup/ScoutSuite \
 && virtualenv -p python3 venv \
 && source venv/bin/activate \
 && pip install -r requirements.txt \
+&& cd ..
 #rem python scout.py --help
-&& cd .. \
 
 #!!!cloudmapper - not working - won't build
 #git clone https://github.com/duo-labs/cloudmapper
@@ -17,9 +17,9 @@ git clone https://github.com/nccgroup/ScoutSuite \
 #pip install -r requirements.txt
 #cd ..
 
+#Pmapper - with sed Monkey Patch
 git clone https://github.com/nccgroup/PMapper \
 && cd PMapper \
-#!!!Monkey Patch
 && sed -i 's/from collections import Mapping, MutableMapping, OrderedDict/from collections\.abc import Mapping, MutableMapping\nfrom collections import OrderedDict/' principalmapper/util/case_insensitive_dict.py \
 && pip install . \
 && cd ..
